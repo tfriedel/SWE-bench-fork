@@ -10,9 +10,13 @@ from swebench.harness.utils import get_modified_files
 
 
 def get_test_cmds(instance) -> list:
-    test_cmd = MAP_REPO_VERSION_TO_SPECS[instance["repo"]][instance["version"]][
-        "test_cmd"
-    ]
+    install_config = instance.get("install_config")
+    if install_config and "test_cmd" in install_config:
+        test_cmd = install_config["test_cmd"]
+    else:
+        test_cmd = MAP_REPO_VERSION_TO_SPECS[instance["repo"]][instance["version"]][
+            "test_cmd"
+        ]
     return [test_cmd] if isinstance(test_cmd, str) else test_cmd
 
 

@@ -359,6 +359,8 @@ def make_eval_script_list_py(
     )
     if "test_cmd" in specs:
         test_cmd = specs["test_cmd"]
+        if isinstance(test_cmd, list):
+            test_cmd = " ".join(test_cmd)
     else:
         test_cmd = MAP_REPO_VERSION_TO_SPECS[instance["repo"]][instance["version"]][
             "test_cmd"

@@ -152,7 +152,7 @@ class RunInstanceTracto:
             try:
                 podman_daemon.wait_for_podman()
 
-                docker_client = docker.DockerClient(base_url=podman_daemon.socket_url)
+                docker_client = docker.DockerClient(base_url=podman_daemon.socket_url, timeout=600)
 
                 tracto_registry_creds = get_tracto_registry_creds_from_env()
                 docker_client.login(

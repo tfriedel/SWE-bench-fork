@@ -48,6 +48,7 @@ class TestSpec:
     env_image_tag: str = LATEST
     instance_image_tag: str = LATEST
     install_config: dict | None = None
+    image_name: Optional[str] = None
 
     @property
     def setup_env_script(self):
@@ -108,6 +109,8 @@ class TestSpec:
 
     @property
     def instance_image_key(self):
+        if self.image_name is not None:
+            return self.image_name
         key = f"sweb.eval.{self.arch}.{self.instance_id.lower()}:{self.instance_image_tag}"
         if self.is_remote_image:
             key = f"{self.namespace}/{key}".replace("__", "_1776_")
@@ -115,7 +118,7 @@ class TestSpec:
 
     @property
     def is_remote_image(self):
-        return self.namespace is not None
+        return self.namespace is not None or self.image_name is not None
 
     def get_instance_container_name(self, run_id=None):
         if not run_id:
@@ -246,4 +249,5 @@ def make_test_spec(
         env_image_tag=env_image_tag,
         instance_image_tag=instance_image_tag,
         install_config=install_config,
+        image_name=instance.get("image_name"),
     )
