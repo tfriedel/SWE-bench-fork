@@ -26,6 +26,31 @@ from swebench.harness.test_spec.create_scripts import (
 )
 
 
+REMOTE_CONDA_ACTIVATE = (
+    "if [ -f /opt/conda/etc/profile.d/conda.sh ]; then "
+    "source /opt/conda/etc/profile.d/conda.sh; "
+    "elif [ -f /opt/miniconda3/etc/profile.d/conda.sh ]; then "
+    "source /opt/miniconda3/etc/profile.d/conda.sh; "
+    "elif [ -f /opt/miniconda3/bin/activate ]; then "
+    "source /opt/miniconda3/bin/activate; "
+    "else echo 'Conda activation script not found' >&2; exit 1; fi"
+)
+
+
+def _make_remote_eval_compatible(
+    eval_script_list: list[str], install_command: str | None
+) -> list[str]:
+    updated = [
+        REMOTE_CONDA_ACTIVATE
+        if cmd == "source /opt/miniconda3/bin/activate"
+        else cmd
+        for cmd in eval_script_list
+    ]
+    if install_command is not None:
+        updated = [cmd for cmd in updated if cmd != install_command]
+    return updated
+
+
 @dataclass
 class TestSpec:
     """
@@ -217,6 +242,7 @@ def make_test_spec(
         install_config = None
         specs = MAP_REPO_VERSION_TO_SPECS[repo][version]
     docker_specs = specs.get("docker_specs", {})
+    image_name = instance.get("image_name")
 
     repo_script_list = make_repo_script_list(
         specs, repo, repo_directory, base_commit, env_name
@@ -225,6 +251,10 @@ def make_test_spec(
     eval_script_list = make_eval_script_list(
         instance, specs, env_name, repo_directory, base_commit, test_patch
     )
+    if namespace is not None or image_name is not None:
+        eval_script_list = _make_remote_eval_compatible(
+            eval_script_list, specs.get("install") if image_name is not None else None
+        )
     # if platform.machine() in {"aarch64", "arm64"}:
     #     # use arm64 unless explicitly specified
     #     arch = "arm64" if instance_id not in USE_X86 else "x86_64"
@@ -249,5 +279,5 @@ def make_test_spec(
         env_image_tag=env_image_tag,
         instance_image_tag=instance_image_tag,
         install_config=install_config,
-        image_name=instance.get("image_name"),
+        image_name=image_name,
     )

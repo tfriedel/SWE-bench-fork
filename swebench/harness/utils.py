@@ -146,8 +146,8 @@ def _clean_install_config(inst: dict) -> dict:
         if not cleaned.get('pre_install'):
             cleaned['pre_install'] = []
         if 'install' in cleaned:
-            cleaned['install'] = "LANG=C.UTF-8 LC_ALL=C.UTF-8 " + cleaned['install']
-        cleaned['test_cmd'] = "LANG=C.UTF-8 LC_ALL=C.UTF-8 " + cleaned['test_cmd']
+            cleaned['install'] = cleaned['install']
+        cleaned['test_cmd'] =  cleaned['test_cmd']
         new_inst["install_config"] = cleaned
         new_inst['environment_setup_commit'] = new_inst['base_commit']
     return new_inst
