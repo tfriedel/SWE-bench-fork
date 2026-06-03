@@ -27,6 +27,18 @@ python -m swebench.harness.run_evaluation \
     --namespace ""
 ```
 
+### Example run
+
+An internal example run used MiniMax M2.5 as the model with `mini-swe-agent` 1.14.4 as the scaffold, a 128k context window, and a 300 step limit. The evaluation covered 105 instances from the `2026_01` and `2026_02` splits.
+
+| Run | resolved_rate |
+| --- | --- |
+| 1 | 42.9 |
+| 2 | 39.0 |
+| 3 | 44.8 |
+
+Mean `resolved_rate`: 42.2; sample standard deviation: 3.0.
+
 ### TractoAI for running evaluations at scale
 
 [TractoAI](https://tracto.ai) is a unified compute platform for AI and data workloads.
