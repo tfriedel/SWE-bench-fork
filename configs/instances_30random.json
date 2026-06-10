@@ -1,0 +1,122 @@
+[
+  {
+    "instance_id": "BerriAI__litellm-16997",
+    "repo": "BerriAI/litellm"
+  },
+  {
+    "instance_id": "Blaizzy__mlx-vlm-179",
+    "repo": "Blaizzy/mlx-vlm"
+  },
+  {
+    "instance_id": "CQCL__guppylang-1259",
+    "repo": "CQCL/guppylang"
+  },
+  {
+    "instance_id": "CWorthy-ocean__C-Star-227",
+    "repo": "CWorthy-ocean/C-Star"
+  },
+  {
+    "instance_id": "Toloka__crowd-kit-128",
+    "repo": "Toloka/crowd-kit"
+  },
+  {
+    "instance_id": "VRSEN__agency-swarm-468",
+    "repo": "VRSEN/agency-swarm"
+  },
+  {
+    "instance_id": "agronholm__anyio-975",
+    "repo": "agronholm/anyio"
+  },
+  {
+    "instance_id": "angr__claripy-603",
+    "repo": "angr/claripy"
+  },
+  {
+    "instance_id": "aws-cloudformation__cfn-python-lint-4368",
+    "repo": "aws-cloudformation/cfn-python-lint"
+  },
+  {
+    "instance_id": "davep__braindrop-96",
+    "repo": "davep/braindrop"
+  },
+  {
+    "instance_id": "elementsinteractive__twyn-317",
+    "repo": "elementsinteractive/twyn"
+  },
+  {
+    "instance_id": "equinor__ert-12275",
+    "repo": "equinor/ert"
+  },
+  {
+    "instance_id": "ethereum__web3.py-3584",
+    "repo": "ethereum/web3.py"
+  },
+  {
+    "instance_id": "facelessuser__pymdown-extensions-2651",
+    "repo": "facelessuser/pymdown-extensions"
+  },
+  {
+    "instance_id": "geopandas__geopandas-3591",
+    "repo": "geopandas/geopandas"
+  },
+  {
+    "instance_id": "home-assistant__core-134506",
+    "repo": "home-assistant/core"
+  },
+  {
+    "instance_id": "huggingface__transformers-44080",
+    "repo": "huggingface/transformers"
+  },
+  {
+    "instance_id": "opsmill__infrahub-8423",
+    "repo": "opsmill/infrahub"
+  },
+  {
+    "instance_id": "oracle__macaron-1136",
+    "repo": "oracle/macaron"
+  },
+  {
+    "instance_id": "piskvorky__smart_open-892",
+    "repo": "piskvorky/smart_open"
+  },
+  {
+    "instance_id": "python-trio__trio-3280",
+    "repo": "python-trio/trio"
+  },
+  {
+    "instance_id": "scipy__scipy-24282",
+    "repo": "scipy/scipy"
+  },
+  {
+    "instance_id": "sktime__skpro-574",
+    "repo": "sktime/skpro"
+  },
+  {
+    "instance_id": "stravalib__stravalib-709_interface",
+    "repo": "stravalib/stravalib"
+  },
+  {
+    "instance_id": "streamlink__streamlink-6420",
+    "repo": "streamlink/streamlink"
+  },
+  {
+    "instance_id": "sympy__sympy-27650",
+    "repo": "sympy/sympy"
+  },
+  {
+    "instance_id": "tobymao__sqlglot-5037",
+    "repo": "tobymao/sqlglot"
+  },
+  {
+    "instance_id": "tobymao__sqlglot-6067",
+    "repo": "tobymao/sqlglot"
+  },
+  {
+    "instance_id": "ultrabug__py3status-2286",
+    "repo": "ultrabug/py3status"
+  },
+  {
+    "instance_id": "zarr-developers__zarr-python-2679",
+    "repo": "zarr-developers/zarr-python"
+  }
+]

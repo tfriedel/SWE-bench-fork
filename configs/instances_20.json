@@ -1,0 +1,102 @@
+[
+  {
+    "instance_id": "BerriAI__litellm-13868",
+    "category": "fastapi_services",
+    "repo": "BerriAI/litellm"
+  },
+  {
+    "instance_id": "schemathesis__schemathesis-2985",
+    "category": "fastapi_services",
+    "repo": "schemathesis/schemathesis"
+  },
+  {
+    "instance_id": "jlowin__fastmcp-1011",
+    "category": "fastapi_services",
+    "repo": "jlowin/fastmcp"
+  },
+  {
+    "instance_id": "vitalik__django-ninja-1427",
+    "category": "fastapi_services",
+    "repo": "vitalik/django-ninja"
+  },
+  {
+    "instance_id": "movingpandas__movingpandas-444",
+    "category": "geospatial",
+    "repo": "movingpandas/movingpandas"
+  },
+  {
+    "instance_id": "GenericMappingTools__pygmt-4104",
+    "category": "geospatial",
+    "repo": "GenericMappingTools/pygmt"
+  },
+  {
+    "instance_id": "SciTools__iris-6719",
+    "category": "geospatial",
+    "repo": "SciTools/iris"
+  },
+  {
+    "instance_id": "UXARRAY__uxarray-1369",
+    "category": "geospatial",
+    "repo": "UXARRAY/uxarray"
+  },
+  {
+    "instance_id": "pandas-dev__pandas-60691",
+    "category": "dataframe",
+    "repo": "pandas-dev/pandas"
+  },
+  {
+    "instance_id": "modin-project__modin-7434",
+    "category": "dataframe",
+    "repo": "modin-project/modin"
+  },
+  {
+    "instance_id": "pydata__xarray-10035",
+    "category": "dataframe",
+    "repo": "pydata/xarray"
+  },
+  {
+    "instance_id": "lincc-frameworks__nested-pandas-190",
+    "category": "dataframe",
+    "repo": "lincc-frameworks/nested-pandas"
+  },
+  {
+    "instance_id": "tobymao__sqlglot-4563",
+    "category": "sql",
+    "repo": "tobymao/sqlglot"
+  },
+  {
+    "instance_id": "agronholm__sqlacodegen-368",
+    "category": "sql",
+    "repo": "agronholm/sqlacodegen"
+  },
+  {
+    "instance_id": "reata__sqllineage-723",
+    "category": "sql",
+    "repo": "reata/sqllineage"
+  },
+  {
+    "instance_id": "BrianPugh__cyclopts-609",
+    "category": "cli",
+    "repo": "BrianPugh/cyclopts"
+  },
+  {
+    "instance_id": "omni-us__jsonargparse-667",
+    "category": "cli",
+    "repo": "omni-us/jsonargparse"
+  },
+  {
+    "instance_id": "simonw__files-to-prompt-44",
+    "category": "cli",
+    "repo": "simonw/files-to-prompt"
+  },
+  {
+    "instance_id": "marimo-team__marimo-6629",
+    "category": "frontend_fullstack",
+    "repo": "marimo-team/marimo"
+  },
+  {
+    "instance_id": "avaiga__taipy-2797",
+    "category": "frontend_fullstack",
+    "repo": "Avaiga/taipy"
+  }
+]
